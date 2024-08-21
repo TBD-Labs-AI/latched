@@ -1,6 +1,5 @@
-
-![latched banner](images/Latched.png)
-
 # Latched AI
+
+![latched banner](Images/Latched.png)
 
 Only one solution for mobile AI
