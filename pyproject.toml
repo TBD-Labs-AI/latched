@@ -8,6 +8,7 @@ authors = ["psycoder <psycoder@latched.ai>", "sungman <sungman@latched.ai>"]
 [tool.poetry.dependencies]
 python = "^3.11"
 coremltools = "^7.2"
+transformers = "^4.44.2"
 
 
 [tool.poetry.group.dev.dependencies]
