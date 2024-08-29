@@ -11,3 +11,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+__version__ = "0.0.0"
+
+__desc__ = """
+Welcome to latched
+
+Latched is an open source. Simplest way to convert models work on-device.
+"""
+
+print(f"Latched version {__version__}{__desc__}")
