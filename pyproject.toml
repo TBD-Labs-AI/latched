@@ -1,0 +1,17 @@
+# pyproject.toml
+[tool.poetry]
+name = "latched"
+version = "0.0.0"
+description = ""
+authors = ["psycoder <psycoder@latched.ai>", "sungman <sungman@latched.ai>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+coremltools = "^7.2"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.11.2"
+pre-commit = "^3.8.0"
+pytest = "^8.3.2"
+black = "^24.8.0"
