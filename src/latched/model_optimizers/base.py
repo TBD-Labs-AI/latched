@@ -14,5 +14,5 @@ class BaseModelOptimizer:
     """
 
     @abstractmethod
-    def run(model: nn.Module):
+    def run(model: nn.Module) -> None:
         raise NotImplementedError

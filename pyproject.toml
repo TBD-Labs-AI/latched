@@ -21,16 +21,9 @@ ruff = "^0.6.2"
 [tool.black]
 line-length = 120
 target-version = ['py311']
-include = '\.pyi?$'
 exclude = '''
 /(
     \.git
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
 )/
 '''
 
@@ -43,5 +36,3 @@ extend-ignore = [
 
 [tool.mypy]
 python_version = 3.11
-strict = true
-ignore_missing_imports = true

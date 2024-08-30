@@ -12,5 +12,5 @@ class AutoOptimizer(BaseModelOptimizer):
     """AutoOptimizer to use the optimization techniques with a easiest way."""
 
     @classmethod
-    def run(model: nn.Module):
+    def run(model: nn.Module) -> None:
         pass
