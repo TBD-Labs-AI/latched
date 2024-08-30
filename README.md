@@ -2,4 +2,9 @@
 
 ![latched banner](Images/Latched.png)
 
-Only one solution for mobile AI
+Code in minutes, Deploy everywhere
+
+Run pre-commit
+```shell
+poetry run pre-commit run --all-files
+```
