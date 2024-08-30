@@ -17,3 +17,31 @@ pre-commit = "^3.8.0"
 pytest = "^8.3.2"
 black = "^24.8.0"
 ruff = "^0.6.2"
+
+[tool.black]
+line-length = 120
+target-version = ['py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+extend-ignore = [
+    "E501",
+]
+
+[tool.mypy]
+python_version = 3.11
+strict = true
+ignore_missing_imports = true

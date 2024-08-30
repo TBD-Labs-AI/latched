@@ -4,22 +4,17 @@
 from dataclasses import dataclass
 
 AVAILABLE_DEVICES = {
-    "apple":[
+    "apple": [
         "iphone_15_pro",
     ],
-    "samsung":[
+    "samsung": [
         "galaxy_s_24",
     ],
-    "nvidia": [
-        "jetson_orin_nano_8gb"
-    ],
-    "rebellion": [
-        "atom"
-    ],
-    "intel": [
-        "gaudi3"
-    ]
+    "nvidia": ["jetson_orin_nano_8gb"],
+    "rebellion": ["atom"],
+    "intel": ["gaudi3"],
 }
+
 
 @dataclass
 class DeviceConfig:
@@ -27,7 +22,8 @@ class DeviceConfig:
 
     Attributes:
         type (str): the type of device
-        limit_mem_gb (int): 
+        limit_mem_gb (int):
     """
+
     type: str
     limit_mem_gb: int = 2
