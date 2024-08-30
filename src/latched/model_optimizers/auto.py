@@ -9,9 +9,9 @@ if TYPE_CHECKING:
 
 
 class AutoOptimizer(BaseModelOptimizer):
-    """
-    AutoOptimizer to use the optimization techniques with a easiest way.
+    """AutoOptimizer to use the optimization techniques with a easiest way.
     """
 
+    @classmethod
     def run(model: nn.Module):
         pass
