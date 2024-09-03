@@ -5,13 +5,14 @@
 import torch.nn as nn
 
 
-class BaseModel(nn.Module):
+class BaseModelWrapper(nn.Module):
     """
-    Base class for the model.
+    Base class for the model wrapper. Model wrapper converts any models from different libraries to a unified interface(nn.Module).
 
     Args:
-        model (nn.Module): The model from any library
+        model (nn.Module): The model wrapper for handling the model from any library
     """
 
     def __init__(self, model: nn.Module):
+        super().__init__()
         self.model = model
