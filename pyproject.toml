@@ -30,9 +30,7 @@ exclude = '''
 [tool.ruff]
 line-length = 120
 target-version = "py311"
-extend-ignore = [
-    "E501",
-]
+extend-ignore = ["E501"]
 
 [tool.mypy]
-python_version = 3.11
+python_version = "3.11"
