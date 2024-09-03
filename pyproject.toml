@@ -9,6 +9,10 @@ authors = ["psycoder <psycoder@latched.ai>", "sungman <sungman@latched.ai>"]
 python = "^3.11"
 coremltools = "^7.2"
 transformers = "^4.44.2"
+torch = "2.1.2"
+torchvision = "0.16.2"
+torchaudio = "2.1.2"
+numpy = "<2"
 
 
 [tool.poetry.group.dev.dependencies]
