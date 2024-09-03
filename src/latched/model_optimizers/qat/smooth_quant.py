@@ -3,8 +3,8 @@
 
 
 from latched.model_optimizers.base import BaseModelOptimizer
+import torch.nn as nn
 
-from latched.models.base import BaseModel
 
 class SmoothQuantOptimizer(BaseModelOptimizer):
     """
@@ -15,5 +15,5 @@ class SmoothQuantOptimizer(BaseModelOptimizer):
     """
 
     @classmethod
-    def run(model: BaseModel) -> BaseModel:
+    def run(cls, model: nn.Module) -> nn.Module:
         pass

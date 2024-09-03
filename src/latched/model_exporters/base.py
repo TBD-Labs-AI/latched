@@ -3,7 +3,7 @@
 
 from abc import abstractmethod
 
-from latched.models.base import BaseModel
+import torch.nn as nn
 
 
 class BaseModelExporter:
@@ -12,5 +12,5 @@ class BaseModelExporter:
     """
 
     @abstractmethod
-    def run(model: BaseModel) -> BaseModel:
+    def run(cls, model: nn.Module) -> nn.Module:
         raise NotImplementedError
