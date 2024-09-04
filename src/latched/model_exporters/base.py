@@ -2,12 +2,13 @@
 # SPDX-License-Identifier: Apache-2.0
 
 from abc import abstractmethod
+
 import torch.nn as nn
 
 
-class BaseModelOptimizer:
+class BaseModelExporter:
     """
-    Base class of the Optimizer.
+    Base class of the Exporter.
     """
 
     @abstractmethod
