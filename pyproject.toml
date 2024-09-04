@@ -1,0 +1,40 @@
+# pyproject.toml
+[tool.poetry]
+name = "latched"
+version = "0.0.0"
+description = ""
+authors = ["psycoder <psycoder@latched.ai>", "sungman <sungman@latched.ai>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+coremltools = "^7.2"
+transformers = "^4.44.2"
+torch = "2.1.2"
+torchvision = "0.16.2"
+torchaudio = "2.1.2"
+numpy = "<2"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.11.2"
+pre-commit = "^3.8.0"
+pytest = "^8.3.2"
+black = "^24.8.0"
+ruff = "^0.6.2"
+
+[tool.black]
+line-length = 120
+target-version = ['py311']
+exclude = '''
+/(
+    \.git
+)/
+'''
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+extend-ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
