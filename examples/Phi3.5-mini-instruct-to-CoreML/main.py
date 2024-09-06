@@ -3,16 +3,15 @@
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-from latched.models.auto import AutoModelWrapper
+from latched.model_wrappers.auto import AutoModelWrapper
 from latched.model_optimizers.ptq.hf_qint8 import HFQuantOptimizer
 
 # Load the huggingface tokenizer and model
 model_path = "microsoft/Phi-3.5-mini-instruct"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
-
 model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype="auto")
 
-# warp the model in Latched's AutoModel
+# Wrap the model in Latched's AutoModel
 latched_model_wrapper = AutoModelWrapper(model=model, tokenizer=tokenizer)
 
 # Optimize the model
