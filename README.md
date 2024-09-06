@@ -1,10 +1,12 @@
 
 
 <p align="center">
-  <img src="Images/Logo-no-background-3x.png" alt="Latched" width="50%">
+    <img src="Images/Logo-no-background-3x.png" alt="Latched" width="50%">
 </p>
 
-[![Static Badge](https://img.shields.io/badge/discore-join_community-blue)](https://discord.gg/UxMXBHUWcr)
+<p align="center">
+    <a href="https://discord.gg/UxMXBHUWcr"><img src="https://img.shields.io/badge/discord-join_community-blue" alt="Discord"/></a>
+</p>
 
 <h3 align="center">
 ML models latches onto devices
