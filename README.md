@@ -1,39 +1,58 @@
-# Latched AI
 
 ![latched banner](Images/Latched.png)
 
-Code in minutes, Deploy everywhere
+# ML models latches onto devices
 
-### How to use Poetry
-1. Install the Poetry
-    ```shell
-    # Liunux
-    curl -sSL https://install.python-poetry.org | python3 -
-    # Window
-    (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
-    ```
-2. Update the poetry
-    ```shell
-    poetry self update
-    ```
+Latched provides easy-to-use pipelines to perform ML models on various devices such as mobile, Nvidia jetson, Intel CPUs,  and accelerators. Not only converting models, but also deploying them.
 
-3. Install the dependencies
-    ```shell
-    poetry install --with dev
-    ```
+Supported Models:
 
-4. Run the poetry virtual environment
-    ```shell
-    poetry shell
-    python your_code.py
-    ```
+Text:
 
-5. Deactivate
-    ```shell
-    deactivate
-    ```
+- Small Language Models, to embed chat-bot or text analysis on device
 
-### Run pre-commit
-```shell
-poetry run pre-commit run --all-files
-```
+VIsion:
+
+- Object Detection (coming soon)
+- Image Classification (coming soon)
+
+Audio:
+
+- Speech to Text, Automatic Speech Recognition (coming soon)
+
+Supported Frameworks:
+
+- [PyTorch](https://pytorch.org/)
+- [Hugging Face](https://huggingface.co/)
+
+## Latched Components
+
+**Latched**: Latched python library provides hardware-aware optimization. With this library, you can export your ML model into hardware-optimized forms.
+
+**Latched Server**: Latched server provides a RESTful API to register and run ML models on various devices.
+
+**Latched Devices SDKs**: Latched devices SDKs provide libraries to run ML models on various devices.
+
+## Getting Started
+
+### Installation
+
+coming soon
+
+### How to use Latched
+
+coming soon
+
+## Model Zoo
+
+coming soon
+
+## Contributing
+
+Do you believe the future of AI is on edge computing? Do you want to make it happen?
+Join Latched as a contributor!
+If you want to contribute to Latched, please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+## Milestones
+
+coming soon
