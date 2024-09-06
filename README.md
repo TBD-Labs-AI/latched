@@ -23,6 +23,8 @@ Supported ML Tasks:
 📚 Text:
 
 - Small Language Models, to embed chat-bot or text analysis on device
+  - **Phi 3.5 mini** (iPhone 15 Pro)
+  - Other models will be supported soon
 - Other tasks will be supported soon
 
 🏞️ VIsion:
@@ -44,6 +46,8 @@ Supported Frameworks:
 
 ## Latched Components
 
+<!-- Put some Diagram here -->
+
 **Latched**: Latched python library provides hardware-aware optimization. With this library, you can export your ML model into hardware-optimized forms.
 
 **Latched Server**: Latched server provides a RESTful API to register and run ML models on various devices.
@@ -58,9 +62,28 @@ coming soon
 
 ### How to use Latched
 
-coming soon
+1. Optimize Model
+   ```python
+   # Code will be updated soon
+   from latched import AutoModelOptimizer
+   ...
+   ```
+2. Export Model
+   ```python
+   # Code will be updated soon
+   ```
+3. Register Model to Model Manager
+   ```python
+   # Code will be updated soon
+   ```
+4. Run model on device (swift version)
+   ```swift
+   // Code will be updated soon
+   import Latched
+   let model = LatchedModel(key: "model_key")
+   ```
 
-## Model Zoo
+## Model Hub
 
 coming soon
 
@@ -73,3 +96,10 @@ If you want to contribute to Latched, please read the [CONTRIBUTING.md](CONTRIBU
 ## Milestones
 
 coming soon
+
+## Acknowledgements
+
+This repository uses the following third-party libraries:
+
+- [PyTorch](https://pytorch.org/)
+- [Hugging Face](https://huggingface.co/)
