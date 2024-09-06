@@ -5,10 +5,15 @@
 </p>
 
 <p align="center">
-    <a href="https://discord.gg/UxMXBHUWcr"><img src="https://img.shields.io/badge/community-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord"/></a>
+    <!-- <a href="https://discord.gg/UxMXBHUWcr"><img src="https://img.shields.io/badge/community-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord"/></a> -->
     <a href="https://github.com/TBD-Labs-AI/latched/issues"><img src="https://img.shields.io/github/issues-pr/TBD-Labs-AI/latched" alt="PRs Welcome"/></a>
     <a href="https://github.com/TBD-Labs-AI/latched/blob/main/LICENSE"><img src="https://img.shields.io/github/license/TBD-Labs-AI/latched" alt="License"/></a>
     <a href="https://www.latched.ai"><img src="https://img.shields.io/website?url=https%3A%2F%2Fwww.latched.ai" alt="Website"/></a>
+</p>
+<p align="center">
+    <img src="https://img.shields.io/discord/1275723787651776533?style=social&logo=discord&logoColor=black"/>
+    <img src="https://img.shields.io/github/stars/TBD-Labs-AI/latched"/>
+    <img src="https://img.shields.io/twitter/follow/latched_">
 </p>
 
 <h3 align="center">
@@ -18,12 +23,12 @@ ML models latches onto devices
 Latched provides easy-to-use pipelines to perform ML models on various devices such as mobile, Nvidia jetson, Intel CPUs,  and accelerators.
 Latched covers both converting models and deploying them(Latched Model Manager, Latched Devices SDKs).
 
-Supported ML Tasks:
+## 🤖 Supported ML Tasks
 
 📚 Text:
 
 - Small Language Models, to embed chat-bot or text analysis on device
-  - **Phi 3.5 mini** (iPhone 15 Pro)
+  - **Phi 3.5 mini** + OmniQuantW3A8 @ iPhone 15 Pro
   - Other models will be supported soon
 - Other tasks will be supported soon
 
@@ -44,7 +49,7 @@ Supported Frameworks:
 - [PyTorch](https://pytorch.org/)
 - [Hugging Face](https://huggingface.co/)
 
-## Latched Components
+## 🧩 Latched Components
 
 <!-- Put some Diagram here -->
 
@@ -54,7 +59,7 @@ Supported Frameworks:
 
 **Latched Devices SDKs**: Latched devices SDKs provide libraries to run ML models on various devices.
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Installation
 
@@ -83,7 +88,7 @@ coming soon
    let model = LatchedModel(key: "model_key")
    ```
 
-## Model Hub
+## 📚 Model Hub
 
 coming soon
 
@@ -93,11 +98,19 @@ Do you believe the future of AI is on edge computing? Do you want to make it hap
 Join Latched as a contributor!
 If you want to contribute to Latched, please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
-## Milestones
+## 📅 Milestones
 
-coming soon
-
-## Acknowledgements
+### SEP 2024
+- [ ] Optimize Phi 3.5 mini model
+  - [ ] Export Phi 3.5 mini model to CoreML
+  - [ ] Optimize Phi 3.5 mini model to iPhone 15 Pro
+  - [ ] Export Phi 3.5 mini model to tflite (suuport Android OS)
+  - [ ] Optimize Phi 3.5 mini model to Samsung Galaxy S24
+- [ ] Register Phi 3.5 mini model to Model Manager
+- [ ] Create Swift example code to run Phi 3.5 mini model on iPhone 15 Pro
+- [ ] Create Android example code to run Phi 3.5 mini model on Samsung Galaxy S24
+- [ ] Release Benchmark Dashboard of Phi 3.5 mini model on each devices
+## 🤝 Acknowledgements
 
 This repository uses the following third-party libraries:
 
