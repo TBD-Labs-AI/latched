@@ -28,7 +28,7 @@ Latched covers both converting models and deploying them(Latched Model Manager, 
 📚 Text:
 
 - Small Language Models, to embed chat-bot or text analysis on device
-  - **Phi 3.5 mini** + OmniQuantW3A8 @ iPhone 15 Pro
+  - **Phi 3.5 mini** + OmniQuantW3A16 @ iPhone 15 Pro
   - Other models will be supported soon
 - Other tasks will be supported soon
 
