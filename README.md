@@ -1,12 +1,14 @@
 
 
 <p align="center">
-  <img src="Images/Logo-nobackground.png" alt="Latched" width="50%">
+  <img src="Images/Logo-no-background-3x.png" alt="Latched" width="50%">
 </p>
 
 [![Static Badge](https://img.shields.io/badge/discore-join_community-blue)](https://discord.gg/UxMXBHUWcr)
 
-# ML models latches onto devices
+<h3 align="center">
+ML models latches onto devices
+</h3>
 
 Latched provides easy-to-use pipelines to perform ML models on various devices such as mobile, Nvidia jetson, Intel CPUs,  and accelerators.
 Latched covers both converting models and deploying them(Latched Model Manager, Latched Devices SDKs).
