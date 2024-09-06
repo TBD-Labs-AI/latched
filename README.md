@@ -1,7 +1,10 @@
 
-![latched banner](Images/Latched.png)
 
-[![Static Badge](https://img.shields.io/badge/discore-community-blue)](https://discord.gg/UxMXBHUWcr)
+<p align="center">
+  <img src="Images/Logo-nobackground.png" alt="Latched" width="50%">
+</p>
+
+[![Static Badge](https://img.shields.io/badge/discore-join_community-blue)](https://discord.gg/UxMXBHUWcr)
 
 # ML models latches onto devices
 
