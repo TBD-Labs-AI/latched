@@ -1,10 +1,15 @@
 # Copyright 2024 TBD Labs Inc. All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
 
-from transformers import AutoTokenizer
+from typing import TypeAlias
+
 import torch.nn as nn
-from latched.models.base import BaseModelWrapper
+from transformers import PreTrainedTokenizer, PreTrainedTokenizerFast
 from transformers.models.phi3 import Phi3Model
+
+from latched.model_wrappers.base import BaseModelWrapper
+
+HuggingFaceTokenizer: TypeAlias = PreTrainedTokenizer | PreTrainedTokenizerFast
 
 
 class AutoModelWrapper(BaseModelWrapper):
@@ -16,7 +21,7 @@ class AutoModelWrapper(BaseModelWrapper):
         tokenizer (AutoTokenizer): The tokenizer from any library
     """
 
-    def __init__(self, model: nn.Module, tokenizer: AutoTokenizer):
+    def __init__(self, model: nn.Module, tokenizer: HuggingFaceTokenizer):
         super().__init__(model)
         self.tokenizer = tokenizer
 

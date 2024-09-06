@@ -8,11 +8,12 @@ authors = ["psycoder <psycoder@latched.ai>", "sungman <sungman@latched.ai>"]
 [tool.poetry.dependencies]
 python = "^3.11"
 coremltools = "^7.2"
-transformers = "^4.44.2"
-torch = "2.1.2"
-torchvision = "0.16.2"
-torchaudio = "2.1.2"
+transformers = "<4.44"
+torch = ">=2.4"
 numpy = "<2"
+optimum = "^1.21.4"
+torchvision = "^0.19.1"
+optimum-quanto = "^0.2.4"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -38,3 +39,4 @@ extend-ignore = ["E501"]
 
 [tool.mypy]
 python_version = "3.11"
+ignore_missing_imports = true
