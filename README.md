@@ -5,18 +5,10 @@
 </p>
 
 <p align="center">
-    <a href="https://discord.gg/UxMXBHUWcr">
-        <img src="https://img.shields.io/badge/community-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord"/>
-    </a>
-    <a href="https://github.com/TBD-Labs-AI/latched/issues">
-        <img src="https://img.shields.io/github/issues-pr/TBD-Labs-AI/latched" alt="PRs Welcome"/>
-    </a>
-    <a href="https://github.com/TBD-Labs-AI/latched/blob/main/LICENSE">
-        <img src="https://img.shields.io/github/license/TBD-Labs-AI/latched" alt="License"/>
-    </a>
-    <a href="https://www.latched.ai">
-        <img src="https://img.shields.io/website?url=https%3A%2F%2Fwww.latched.ai" alt="Website"/>
-    </a>
+    <a href="https://discord.gg/UxMXBHUWcr"><img src="https://img.shields.io/badge/community-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord"/></a>
+    <a href="https://github.com/TBD-Labs-AI/latched/issues"><img src="https://img.shields.io/github/issues-pr/TBD-Labs-AI/latched" alt="PRs Welcome"/></a>
+    <a href="https://github.com/TBD-Labs-AI/latched/blob/main/LICENSE"><img src="https://img.shields.io/github/license/TBD-Labs-AI/latched" alt="License"/></a>
+    <a href="https://www.latched.ai"><img src="https://img.shields.io/website?url=https%3A%2F%2Fwww.latched.ai" alt="Website"/></a>
 </p>
 
 <h3 align="center">
