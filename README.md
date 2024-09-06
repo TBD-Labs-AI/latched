@@ -5,8 +5,9 @@
 </p>
 
 <p align="center">
-    <a href="https://discord.gg/UxMXBHUWcr"><img src="https://img.shields.io/badge/community-5865F2?style=flat&logo=discord&logoColor=white
-    " alt="Discord"/></a>
+    <a href="https://discord.gg/UxMXBHUWcr">
+        <img src="https://img.shields.io/badge/community-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord"/>
+    </a>
     <img src="https://img.shields.io/github/issues-pr/TBD-Labs-AI/latched" alt="PRs Welcome"/>
 </p>
 
