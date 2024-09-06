@@ -1,24 +1,31 @@
 
 ![latched banner](Images/Latched.png)
 
+[![Static Badge](https://img.shields.io/badge/discore-community-blue)](https://discord.gg/UxMXBHUWcr)
+
 # ML models latches onto devices
 
-Latched provides easy-to-use pipelines to perform ML models on various devices such as mobile, Nvidia jetson, Intel CPUs,  and accelerators. Not only converting models, but also deploying them.
+Latched provides easy-to-use pipelines to perform ML models on various devices such as mobile, Nvidia jetson, Intel CPUs,  and accelerators.
+Latched covers both converting models and deploying them(Latched Model Manager, Latched Devices SDKs).
 
-Supported Models:
+Supported ML Tasks:
 
-Text:
+📚 Text:
 
 - Small Language Models, to embed chat-bot or text analysis on device
+- Other tasks will be supported soon
 
-VIsion:
+🏞️ VIsion:
 
 - Object Detection (coming soon)
 - Image Classification (coming soon)
+- Other tasks will be supported soon
 
-Audio:
+🗣️ Audio:
 
 - Speech to Text, Automatic Speech Recognition (coming soon)
+- Other tasks will be supported soon
+
 
 Supported Frameworks:
 
