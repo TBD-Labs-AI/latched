@@ -4,7 +4,7 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 from latched.model_wrappers.auto import AutoModelWrapper
-from latched.model_optimizers.ptq.hf_qint8 import HFQuantOptimizer
+from latched.model_optimizers.hf_qint8 import HFQuantOptimizer
 from latched.model_exporters.tflite import TFLiteExporter
 
 # Load the huggingface tokenizer and model
