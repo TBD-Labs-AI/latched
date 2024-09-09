@@ -18,10 +18,10 @@ class AutoModelWrapper(BaseModelWrapper):
 
     Args:
         model (BaseModelWrapper): The model wrapper from any library
-        tokenizer (AutoTokenizer): The tokenizer from any library
+        tokenizer (AutoTokenizer, optional): The tokenizer from any library
     """
 
-    def __init__(self, model: nn.Module, tokenizer: HuggingFaceTokenizer):
+    def __init__(self, model: nn.Module, tokenizer: HuggingFaceTokenizer | None = None):
         super().__init__(model)
         self.tokenizer = tokenizer
 
