@@ -17,8 +17,6 @@ latched_model_wrapper = AutoModelWrapper(model=model, tokenizer=tokenizer)
 
 # Optimize the model
 optimized_model = HFQuantOptimizer.run(latched_model_wrapper.model)
-print(optimized_model)
-print(optimized_model.model.layers[0].self_attn.qkv_proj.weight)
 
 # Export the model to TFLite
 exported_model = TFLiteExporter.run(optimized_model)
