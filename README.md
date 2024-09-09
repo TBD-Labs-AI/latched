@@ -28,7 +28,7 @@ Latched covers both converting models and deploying them(Latched Model Manager, 
 📚 Text:
 
 - Small Language Models, to embed chat-bot or text analysis on device
-  - **Phi 3.5 mini** + OmniQuantW3A16 @ iPhone 15 Pro
+  - **Phi 3.5 mini** + OmniQuantW3A16 @ iPhone 15 Pro (coming soon)
   - Other models will be supported soon
 - Other tasks will be supported soon
 
@@ -55,7 +55,7 @@ Supported Frameworks:
 
 **Latched**: Latched python library provides hardware-aware optimization. With this library, you can export your ML model into hardware-optimized forms.
 
-**Latched Server**: Latched server provides a RESTful API to register and run ML models on various devices.
+**Latched Model Manager**: Latched model manager provides a RESTful API to register and run ML models on various devices.
 
 **Latched Devices SDKs**: Latched devices SDKs provide libraries to run ML models on various devices.
 
@@ -102,13 +102,29 @@ If you want to contribute to Latched, please read the [CONTRIBUTING.md](CONTRIBU
 
 ### SEP 2024
 - [ ] Optimize Phi 3.5 mini model
-  - [ ] Export Phi 3.5 mini model to CoreML
-  - [ ] Optimize Phi 3.5 mini model to iPhone 15 Pro
-  - [ ] Export Phi 3.5 mini model to tflite (suuport Android OS)
-  - [ ] Optimize Phi 3.5 mini model to Samsung Galaxy S24
+  - [ ] Export Phi 3.5 mini model to 
+    - [ ] CoreML
+    - [ ] TensorFlow Lite
+    - [ ] TensorRT
+    - [ ] OpenVINO
+    - [ ] ONNX
+  - [ ] Optimize Phi 3.5 mini model to
+    - [ ] Apple iPhone 15 Pro
+    - [ ] Samsung Galaxy S24
+    - [ ] Nvidia Jetson
+    - [ ] Intel CPU
+    - [ ] Intel Gaudi2
+    - [ ] Rebellion ATOM
+    - [ ] AWS Inferentia
 - [ ] Register Phi 3.5 mini model to Model Manager
-- [ ] Create Swift example code to run Phi 3.5 mini model on iPhone 15 Pro
-- [ ] Create Android example code to run Phi 3.5 mini model on Samsung Galaxy S24
+- [ ] Create Swift example code to run 
+  - [ ] Phi 3.5 mini model on Apple iPhone 15 Pro
+  - [ ] Phi 3.5 mini model on Samsung Galaxy S24
+  - [ ] Phi 3.5 mini model on Nvidia Jetson
+  - [ ] Phi 3.5 mini model on Intel CPU
+  - [ ] Phi 3.5 mini model on Intel Gaudi2
+  - [ ] Phi 3.5 mini model on Rebellion ATOM
+  - [ ] Phi 3.5 mini model on AWS Inferentia
 - [ ] Release Benchmark Dashboard of Phi 3.5 mini model on each devices
 ## 🤝 Acknowledgements
 
