@@ -4,7 +4,8 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 from latched.model_wrappers.auto import AutoModelWrapper
-from latched.model_optimizers.ptq.hf_qint8 import HFQuantOptimizer
+from latched.model_optimizers.hf_qint8 import HFQuantOptimizer
+from latched.model_exporters.coreml import CoreMLExporter
 
 # Load the huggingface tokenizer and model
 model_path = "microsoft/Phi-3.5-mini-instruct"
@@ -16,8 +17,6 @@ latched_model_wrapper = AutoModelWrapper(model=model, tokenizer=tokenizer)
 
 # Optimize the model
 optimized_model = HFQuantOptimizer.run(latched_model_wrapper.model)
-print(optimized_model)
-print(optimized_model.model.layers[0].self_attn.qkv_proj.weight)
 
-# TODO: Export the model to CoreML
-# exported_model = BaseModelExporter.run(optimized_model)
+# Export the model to CoreML
+exported_model = CoreMLExporter.run(optimized_model)
