@@ -102,7 +102,7 @@ If you want to contribute to Latched, please read the [CONTRIBUTING.md](CONTRIBU
 
 ### SEP 2024
 - [ ] Optimize Phi 3.5 mini model
-  - [ ] Export Phi 3.5 mini model to 
+  - [ ] Export Phi 3.5 mini model to
     - [ ] CoreML
     - [ ] TensorFlow Lite
     - [ ] TensorRT
@@ -117,7 +117,7 @@ If you want to contribute to Latched, please read the [CONTRIBUTING.md](CONTRIBU
     - [ ] Rebellion ATOM
     - [ ] AWS Inferentia
 - [ ] Register Phi 3.5 mini model to Model Manager
-- [ ] Create Swift example code to run 
+- [ ] Create Swift example code to run
   - [ ] Phi 3.5 mini model on Apple iPhone 15 Pro
   - [ ] Phi 3.5 mini model on Samsung Galaxy S24
   - [ ] Phi 3.5 mini model on Nvidia Jetson
