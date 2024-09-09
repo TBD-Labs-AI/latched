@@ -9,7 +9,7 @@ class OpenVINOExporter(BaseModelExporter):
     """
     Export the model to OpenVINO.
     """
-    
+
     @classmethod
     def run(cls, model: nn.Module) -> nn.Module:
         pass

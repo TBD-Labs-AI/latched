@@ -9,7 +9,7 @@ class TFLiteExporter(BaseModelExporter):
     """
     Export the model to TFLite.
     """
-    
+
     @classmethod
     def run(cls, model: nn.Module) -> nn.Module:
         pass

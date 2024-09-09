@@ -9,7 +9,7 @@ class CoreMLExporter(BaseModelExporter):
     """
     Export the model to CoreML.
     """
-    
+
     @classmethod
     def run(cls, model: nn.Module) -> nn.Module:
         pass

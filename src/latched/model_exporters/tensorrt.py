@@ -9,7 +9,7 @@ class TensorRTExporter(BaseModelExporter):
     """
     Export the model to TensorRT.
     """
-    
+
     @classmethod
     def run(cls, model: nn.Module) -> nn.Module:
         pass
