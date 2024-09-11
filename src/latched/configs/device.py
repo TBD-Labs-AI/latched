@@ -15,7 +15,7 @@ AVAILABLE_DEVICES = {
     ],
     "nvidia": ["jetson_orin_nano_8gb"],
     "rebellion": ["atom"],
-    "intel": ["gaudi3"],
+    "intel": ["gaudi2"],
 }
 
 
