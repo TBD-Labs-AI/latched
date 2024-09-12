@@ -19,6 +19,8 @@ def profile(name: str):
     >>> my_function took 0.0123 seconds
     """
     start = time.time()
+    print(f"\033[94mProfiling {name}...\033[0m", end="", flush=True)
     yield
     end = time.time()
-    print(f"{name} took {end - start:.4f} seconds")
+    duration = end - start
+    print(f"\r\033[97m[\033[0m\033[92m{name}\033[0m\033[97m]\033[0m took \033[93m{duration:.4f}\033[0m seconds")
