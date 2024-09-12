@@ -2,6 +2,6 @@
 # SPDX-License-Identifier: Apache-2.0
 
 from .models import get_model_size
-from .profile import profile
+from .profile import profile, profile_decorator
 
-__all__ = ["get_model_size", "profile"]
+__all__ = ["get_model_size", "profile", "profile_decorator"]
