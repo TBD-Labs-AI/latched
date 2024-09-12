@@ -512,26 +512,26 @@ test = ["pytest"]
 
 [[package]]
 name = "coremltools"
-version = "7.2"
+version = "8.0b2"
 description = "Community Tools for Core ML"
 optional = false
 python-versions = "*"
 files = [
-    {file = "coremltools-7.2-cp310-none-macosx_10_15_x86_64.whl", hash = "sha256:2b95e78b96794ff4dce514a78f641b2b0f74e24c44fb4c3923aaf27ee3d2469d"},
-    {file = "coremltools-7.2-cp310-none-macosx_11_0_arm64.whl", hash = "sha256:a3a2f99f9e81802bccdd07b4657d5190f8ca47e824a67e960fcf45e1502df153"},
-    {file = "coremltools-7.2-cp310-none-manylinux1_x86_64.whl", hash = "sha256:1ecf0a4863ac7cb90f164932f13445071925fc5eaa324c32baa56ad9196e8dd8"},
-    {file = "coremltools-7.2-cp311-none-macosx_10_15_x86_64.whl", hash = "sha256:3e22e17f02dcc69c56d12bb1e9c8faab9ab3ee8efbf44ba0d21b7f09f9259dcb"},
-    {file = "coremltools-7.2-cp311-none-macosx_11_0_arm64.whl", hash = "sha256:f47f3e139e1c51e5e2313021b084ea8dc0efa72f5cb9e0a04077c80f06a788c1"},
-    {file = "coremltools-7.2-cp311-none-manylinux1_x86_64.whl", hash = "sha256:fd0cbdd8b73c9f78689b455c10ab2f73b08f893b84b96189198f2d8709b85bdf"},
-    {file = "coremltools-7.2-cp37-none-macosx_10_15_x86_64.whl", hash = "sha256:3393b90e5210af552907d2d7ebe48cc327475b81303666ace0deb5942b913e9a"},
-    {file = "coremltools-7.2-cp37-none-manylinux1_x86_64.whl", hash = "sha256:7ea92a1250d2a8b2b287707d6ecbb606ebb78a6b0eced3d36f8333c72a9ede20"},
-    {file = "coremltools-7.2-cp38-none-macosx_10_15_x86_64.whl", hash = "sha256:e68232e42bd7128601bf566e81472b0ab7bab273edffc30bf4cc6ca84c2fa3a3"},
-    {file = "coremltools-7.2-cp38-none-macosx_11_0_arm64.whl", hash = "sha256:c018dc85e1aef47decdb0e6673a4d09fc179d6c7a26f41076374f43f4db07698"},
-    {file = "coremltools-7.2-cp38-none-manylinux1_x86_64.whl", hash = "sha256:b6aac2d38aed43fae3c0d46c5292a090410594fc09295c824182901e3d912539"},
-    {file = "coremltools-7.2-cp39-none-macosx_10_15_x86_64.whl", hash = "sha256:291cc24ce5a5a9aeb2307fe5036fee2e7e61fd22bba3f12ef6c7f04e6ba4fd0e"},
-    {file = "coremltools-7.2-cp39-none-macosx_11_0_arm64.whl", hash = "sha256:77f700bb15274ed7cd9494c4aeed37ff1ffb59339a7be00f4f5370dccc4bd71e"},
-    {file = "coremltools-7.2-cp39-none-manylinux1_x86_64.whl", hash = "sha256:adb5403a59756afe37a236b2092a75761b95cbef607d08aaee088ad081f1cbdd"},
-    {file = "coremltools-7.2.tar.gz", hash = "sha256:f2186793b85f1d23ec84f842bd11db52b7b0e6a8fe5e796550dd37c6dd3f820f"},
+    {file = "coremltools-8.0b2-cp310-none-macosx_10_15_x86_64.whl", hash = "sha256:edd65d521b8a015823a335ba76dc74976f138ed68b71c0cf59a9b5036419c1e6"},
+    {file = "coremltools-8.0b2-cp310-none-macosx_11_0_arm64.whl", hash = "sha256:906acb5c6dbc78f7988772030a93b793f3811c5ac7edf5478c55792d6b3c0760"},
+    {file = "coremltools-8.0b2-cp310-none-manylinux1_x86_64.whl", hash = "sha256:0d4a7179b81b4db46697280e29662448aaf6d877233c7723b9b7a792b06261a5"},
+    {file = "coremltools-8.0b2-cp311-none-macosx_10_15_x86_64.whl", hash = "sha256:47a951d4917b74fffe0d5031847e3be593457e82e2dd5622d362943171f5cb9e"},
+    {file = "coremltools-8.0b2-cp311-none-macosx_11_0_arm64.whl", hash = "sha256:771660fe25176d1b25c9d7244d5ad313ae8de2706846a22ed4749a73b7f5f102"},
+    {file = "coremltools-8.0b2-cp311-none-manylinux1_x86_64.whl", hash = "sha256:54d58c8578628851b60e80b5d26ec30262a2a9880beddd3f7cbcd61b6b1ea440"},
+    {file = "coremltools-8.0b2-cp37-none-macosx_10_15_x86_64.whl", hash = "sha256:3f3ea466642661a146db11b7bdcc7e81a187b3564cfa31479ca9423d7ebf831c"},
+    {file = "coremltools-8.0b2-cp37-none-manylinux1_x86_64.whl", hash = "sha256:5aa8da9b856859c41a4f312f4b59f84280c052f7eb77659782ded0877e78957f"},
+    {file = "coremltools-8.0b2-cp38-none-macosx_10_15_x86_64.whl", hash = "sha256:88c04ea61081657270c6bab0eccda51eb11cf579397f912ae95d1e01928e7d23"},
+    {file = "coremltools-8.0b2-cp38-none-macosx_11_0_arm64.whl", hash = "sha256:177d54d6d41a4761141e630d2a45651a6f77087b96c6b333da406c51ffe89018"},
+    {file = "coremltools-8.0b2-cp38-none-manylinux1_x86_64.whl", hash = "sha256:fecb7868bdd0609ca7bd8d3f687a57cc779200a14d8529dd5fadbd2722629fef"},
+    {file = "coremltools-8.0b2-cp39-none-macosx_10_15_x86_64.whl", hash = "sha256:eb67f40de2f1e1434bff4c1dcaaf58e2eed39cfb02263ff3df0d9db6bd268805"},
+    {file = "coremltools-8.0b2-cp39-none-macosx_11_0_arm64.whl", hash = "sha256:5aae9e811066479ef1bab36af7605783335c841b1662650c91943a3b84000255"},
+    {file = "coremltools-8.0b2-cp39-none-manylinux1_x86_64.whl", hash = "sha256:8477910f05429d82d20b6c2cbee39e35555281a00328b144aafd32e2444e24cc"},
+    {file = "coremltools-8.0b2.tar.gz", hash = "sha256:713cd37e23d9976d0d2be7ad02972773a3fa3ad9e60ff31ec3845f454184155f"},
 ]
 
 [package.dependencies]
@@ -539,7 +539,7 @@ attrs = ">=21.3.0"
 cattrs = "*"
 numpy = ">=1.14.5"
 packaging = "*"
-protobuf = ">=3.1.0,<=4.0.0"
+protobuf = ">=3.1.0"
 pyaml = "*"
 sympy = "*"
 tqdm = "*"
@@ -969,6 +969,27 @@ test = ["packaging", "pickleshare", "pytest", "pytest-asyncio (<0.22)", "testpat
 test-extra = ["curio", "ipython[test]", "matplotlib (!=3.2.0)", "nbformat", "numpy (>=1.23)", "pandas", "trio"]
 
 [[package]]
+name = "ipywidgets"
+version = "8.1.5"
+description = "Jupyter interactive widgets"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "ipywidgets-8.1.5-py3-none-any.whl", hash = "sha256:3290f526f87ae6e77655555baba4f36681c555b8bdbbff430b70e52c34c86245"},
+    {file = "ipywidgets-8.1.5.tar.gz", hash = "sha256:870e43b1a35656a80c18c9503bbf2d16802db1cb487eec6fab27d683381dde17"},
+]
+
+[package.dependencies]
+comm = ">=0.1.3"
+ipython = ">=6.1.0"
+jupyterlab-widgets = ">=3.0.12,<3.1.0"
+traitlets = ">=4.3.1"
+widgetsnbextension = ">=4.0.12,<4.1.0"
+
+[package.extras]
+test = ["ipykernel", "jsonschema", "pytest (>=3.6.0)", "pytest-cov", "pytz"]
+
+[[package]]
 name = "jedi"
 version = "0.19.1"
 description = "An autocompletion tool for Python that can be used for text editors."
@@ -1045,6 +1066,17 @@ traitlets = ">=5.3"
 [package.extras]
 docs = ["myst-parser", "pydata-sphinx-theme", "sphinx-autodoc-typehints", "sphinxcontrib-github-alt", "sphinxcontrib-spelling", "traitlets"]
 test = ["ipykernel", "pre-commit", "pytest (<8)", "pytest-cov", "pytest-timeout"]
+
+[[package]]
+name = "jupyterlab-widgets"
+version = "3.0.13"
+description = "Jupyter interactive widgets for JupyterLab"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "jupyterlab_widgets-3.0.13-py3-none-any.whl", hash = "sha256:e3cda2c233ce144192f1e29914ad522b2f4c40e77214b0cc97377ca3d323db54"},
+    {file = "jupyterlab_widgets-3.0.13.tar.gz", hash = "sha256:a2966d385328c1942b683a8cd96b89b8dd82c8b8f81dda902bb2bc06d46f5bed"},
+]
 
 [[package]]
 name = "markupsafe"
@@ -1698,10 +1730,7 @@ files = [
 ]
 
 [package.dependencies]
-numpy = [
-    {version = ">=1.23.2", markers = "python_version == \"3.11\""},
-    {version = ">=1.26.0", markers = "python_version >= \"3.12\""},
-]
+numpy = {version = ">=1.23.2", markers = "python_version == \"3.11\""}
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
 tzdata = ">=2022.7"
@@ -3195,6 +3224,17 @@ files = [
 ]
 
 [[package]]
+name = "widgetsnbextension"
+version = "4.0.13"
+description = "Jupyter interactive widgets for Jupyter Notebook"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "widgetsnbextension-4.0.13-py3-none-any.whl", hash = "sha256:74b2692e8500525cc38c2b877236ba51d34541e6385eeed5aec15a70f88a6c71"},
+    {file = "widgetsnbextension-4.0.13.tar.gz", hash = "sha256:ffcb67bc9febd10234a362795f643927f4e0c05d9342c727b65d2384f8feacb6"},
+]
+
+[[package]]
 name = "xxhash"
 version = "3.5.0"
 description = "Python binding for xxHash"
@@ -3433,5 +3473,5 @@ multidict = ">=4.0"
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.11"
-content-hash = "7b7818c68116ad0b71833f6f3230217a2d24f7b2726625904c2a69a848def14c"
+python-versions = "3.11.9"
+content-hash = "bef79ab9d5a5534d254d732e5f68837dd9269c07ac1acc5bfb817a1486028d63"
