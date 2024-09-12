@@ -220,3 +220,19 @@ xcuserdata/
 
 ## CUSTOM ignore ##
 .ruff_cache
+
+# Ignore mlcodel and ml package files
+**/*.mlpackage/
+*.mlmodel
+*.mlmodelc
+
+# Ignore pytorch model files
+*.pt
+*.pth
+*.pkl
+*.bin
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.7z
