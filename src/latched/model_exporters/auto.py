@@ -8,11 +8,11 @@ if TYPE_CHECKING:
     from latched.model_wrappers.base import BaseModelWrapper
 
 
-class OpenVINOExporter(BaseModelExporter):
+class AutoExporter(BaseModelExporter):
     """
-    Export the model to OpenVINO.
+    AutoExporter is a model exporter that automatically selects the best exporter for the given model.
     """
 
     @classmethod
-    def run(cls, model_wrapper: BaseModelWrapper, output_name: str = "model.xml") -> None:
-        pass
+    def run(cls, model_wrapper: BaseModelWrapper, output_name: str = "model.abc") -> None:
+        raise NotImplementedError

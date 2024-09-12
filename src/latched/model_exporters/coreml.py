@@ -1,8 +1,11 @@
 # Copyright 2024 TBD Labs Inc. All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
 
-import torch.nn as nn
+from typing import TYPE_CHECKING
 from latched.model_exporters.base import BaseModelExporter
+
+if TYPE_CHECKING:
+    from latched.model_wrappers.base import BaseModelWrapper
 
 
 class CoreMLExporter(BaseModelExporter):
@@ -11,5 +14,5 @@ class CoreMLExporter(BaseModelExporter):
     """
 
     @classmethod
-    def run(cls, model: nn.Module) -> nn.Module:
+    def run(cls, model_wrapper: BaseModelWrapper, output_name: str = "model.mlmodel") -> None:
         pass

@@ -6,7 +6,7 @@ description = ""
 authors = ["psycoder <psycoder@latched.ai>", "sungman <sungman@latched.ai>"]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "3.11.9"
 coremltools = "^7.2"
 transformers = "<4.44"
 torch = ">=2.4"

@@ -4,8 +4,7 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 from latched.model_wrappers.auto import AutoModelWrapper
-from latched.model_optimizers.hf_qint8 import HFQuantOptimizer
-from latched.model_exporters.tflite import TFLiteExporter
+from latched.model_optimizers.torchao import HFQuantOptimizer
 
 # Load the huggingface tokenizer and model
 model_path = "microsoft/Phi-3.5-mini-instruct"
@@ -19,4 +18,4 @@ latched_model_wrapper = AutoModelWrapper(model=model, tokenizer=tokenizer)
 optimized_model = HFQuantOptimizer.run(latched_model_wrapper.model)
 
 # Export the model to TFLite
-exported_model = TFLiteExporter.run(optimized_model)
+# TFLiteExporter.run(optimized_model)
