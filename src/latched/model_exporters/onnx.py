@@ -18,22 +18,11 @@ class ONNXExporter(BaseModelExporter):
     """
 
     @classmethod
-    def run(cls, model_wrapper: BaseModelWrapper, output_name: str = "model.onnx") -> None:
+    def run(cls, model_wrapper: BaseModelWrapper, output_name: str = "onnx_model") -> None:
         if isinstance(model_wrapper, HuggingFaceModelWrapper):
-            dummy_input = model_wrapper.tokenizer("Hello, world!", return_tensors="pt")
-            model_wrapper.model.eval()
+            from optimum.exporters.onnx import onnx_export_from_model
+            onnx_export_from_model(model_wrapper.original_model, output_name)
 
-            torch.onnx.export(
-                model_wrapper.model,
-                (dummy_input["input_ids"],),
-                output_name,
-                export_params=False,
-                opset_version=14,
-                do_constant_folding=True,
-                input_names=["input_ids"],
-                output_names=["output"],
-                dynamic_axes={"input_ids": {0: "batch_size", 1: "sequence_length"}},
-            )
             print(f"Model exported to {output_name}")
         else:
             raise NotImplementedError(f"Unsupported model wrapper: {type(model_wrapper)}")

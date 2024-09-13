@@ -5,7 +5,6 @@ from typing import TypeAlias
 
 import torch.nn as nn
 
-from transformers.models.phi3 import Phi3Model
 from transformers import PreTrainedTokenizer, PreTrainedTokenizerFast
 
 from latched.configs.device import DeviceConfig
@@ -33,13 +32,25 @@ class HuggingFaceModelWrapper(BaseModelWrapper):
         tokenizer: HuggingFaceTokenizer | None = None,
     ):
         super().__init__(model, precision, device_config)
-
-        if self._is_phi3_model(model) and tokenizer is not None:
+        if self._is_phi3_model(model):
+            self.model = model.model
+            self.original_model = model
+        elif self._is_llama_model(model):
             self.model = model.model.model
-            self.tokenizer = tokenizer
+            self.original_model = model
         else:
             self.model = model
+            self.original_model = model
+        
+        if tokenizer is not None:
+            self.tokenizer = tokenizer
 
     def _is_phi3_model(self, model: nn.Module) -> bool:
         """Check if the model is a Phi3 model."""
-        return isinstance(model, Phi3Model)
+        from transformers.models.phi3 import Phi3Model
+        return isinstance(model.model, Phi3Model)
+
+    def _is_llama_model(self, model: nn.Module) -> bool:
+        """Check if the model is a Llama model."""
+        from transformers.models.llama import LlamaModel
+        return isinstance(model, LlamaModel)
