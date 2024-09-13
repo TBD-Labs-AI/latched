@@ -18,6 +18,7 @@ class OpenVINOExporter(BaseModelExporter):
     def run(cls, model_wrapper: BaseModelWrapper, output_name: str = "openvino_model") -> None:
         if isinstance(model_wrapper, HuggingFaceModelWrapper):
             from optimum.exporters.openvino import export_from_model
+
             export_from_model(model_wrapper.original_model, output_name)
 
             print(f"Model exported to {output_name}")

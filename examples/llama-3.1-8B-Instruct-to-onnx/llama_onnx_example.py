@@ -10,7 +10,7 @@ from latched.model_optimizers.auto import AutoOptimizer
 from latched.model_exporters.onnx import ONNXExporter
 
 # Load the huggingface tokenizer and model
-model_path = "meta-llama/Meta-Llama-3.1-8B-Instruct" 
+model_path = "meta-llama/Meta-Llama-3.1-8B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype="auto")
 

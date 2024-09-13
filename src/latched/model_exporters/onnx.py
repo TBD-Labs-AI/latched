@@ -3,7 +3,6 @@
 
 from __future__ import annotations
 from typing import TYPE_CHECKING
-import torch
 
 from latched.model_exporters.base import BaseModelExporter
 from latched.model_wrappers.huggingface import HuggingFaceModelWrapper
@@ -21,6 +20,7 @@ class ONNXExporter(BaseModelExporter):
     def run(cls, model_wrapper: BaseModelWrapper, output_name: str = "onnx_model") -> None:
         if isinstance(model_wrapper, HuggingFaceModelWrapper):
             from optimum.exporters.onnx import onnx_export_from_model
+
             onnx_export_from_model(model_wrapper.original_model, output_name)
 
             print(f"Model exported to {output_name}")

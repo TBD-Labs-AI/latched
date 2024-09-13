@@ -41,16 +41,18 @@ class HuggingFaceModelWrapper(BaseModelWrapper):
         else:
             self.model = model
             self.original_model = model
-        
+
         if tokenizer is not None:
             self.tokenizer = tokenizer
 
     def _is_phi3_model(self, model: nn.Module) -> bool:
         """Check if the model is a Phi3 model."""
         from transformers.models.phi3 import Phi3Model
+
         return isinstance(model.model, Phi3Model)
 
     def _is_llama_model(self, model: nn.Module) -> bool:
         """Check if the model is a Llama model."""
         from transformers.models.llama import LlamaModel
+
         return isinstance(model, LlamaModel)
