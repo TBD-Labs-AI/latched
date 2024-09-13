@@ -236,3 +236,5 @@ xcuserdata/
 *.zip
 *.rar
 *.7z
+*.onnx
+*.tflite
