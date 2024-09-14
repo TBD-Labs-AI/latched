@@ -16,6 +16,7 @@ torchvision = "^0.19.1"
 optimum-quanto = "^0.2.4"
 onnxruntime = "^1.19.2"
 onnx = "^1.16.2"
+optimum-intel = "^1.19.0"
 
 
 [tool.poetry.group.dev.dependencies]

@@ -23,10 +23,10 @@ optimized_model_wrapper = AutoOptimizer.run(latched_model_wrapper)
 # Export the model to ONNX
 # For the many cases, you can use AutoExporter to automatically select the best exporter for the given model.
 # However, for this specific case, we can use ONNXExporter directly.
-ONNXExporter.run(optimized_model_wrapper, output_name=f"{model_path}.onnx")
+ONNXExporter.run(optimized_model_wrapper, output_name="phi-3.5-mini-instruct.onnx")
 
 # Test the onnx model
-ort_session = ort.InferenceSession(f"{model_path}.onnx")
+ort_session = ort.InferenceSession("phi-3.5-mini-instruct.onnx")
 dummy_input = tokenizer("Hello, world!", return_tensors="pt")
 ort_inputs = {ort_session.get_inputs()[0].name: dummy_input["input_ids"]}
 ort_outputs = ort_session.run(None, ort_inputs)
