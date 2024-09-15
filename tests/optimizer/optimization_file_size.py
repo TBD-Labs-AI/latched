@@ -4,7 +4,7 @@
 import pytest
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from latched.model_optimizers.hf_qint8 import HFQuantOptimizer
+from latched.model_optimizers.torchao import HFQuantOptimizer
 from latched.model_wrappers.auto import AutoModelWrapper
 from latched.utils.models import get_size_of_model
 
@@ -17,12 +17,12 @@ def model():
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = AutoModelWrapper(model=model, tokenizer=tokenizer)
     model.model.eval()
-    return model.model
+    return model
 
 
 def test_file_size_after_quantization(model):
     quantized_model = HFQuantOptimizer.run(model)
     assert quantized_model is not None
-    assert quantized_model.state_dict() is not None
+    assert quantized_model.model.state_dict() is not None
 
-    assert get_size_of_model(model) > get_size_of_model(quantized_model)
+    assert get_size_of_model(model.model) > get_size_of_model(quantized_model.model)
