@@ -47,7 +47,7 @@ How to explain Internet for a medieval knight?<|end|>
 inputs = tokenizer.encode(msg, return_tensors="pt")
 print(inputs)
 mlmodel = ct.models.MLModel("Phi3.5-mini-scripted-int64.mlpackage")
-coreml_inputs = {"input_ids": inputs.to(torch.int32).numpy()}
+coreml_inputs = {"input_ids": inputs.to(torch.int32).numpy()}  # type: ignore
 
 prediction = mlmodel.predict(coreml_inputs)
 
