@@ -58,14 +58,6 @@ class HuggingFaceModelWrapper(BaseModelWrapper):
 
         return isinstance(model, LlamaModel)
 
-    @property
-    def eos_token_id(self) -> int | None:
-        """Get the EOS token ID."""
-        if self.tokenizer is None:
-            return None
-
-        return self.tokenizer.eos_token_id
-
 
 class LLMScriptModelWrapper(nn.Module):
     def __init__(self, model: TracedModule, eos_token_id: int):
