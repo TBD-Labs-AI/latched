@@ -16,6 +16,9 @@ if TYPE_CHECKING:
 
 CoreMLReturn: TypeAlias = Any
 
+if TYPE_CHECKING:
+    from latched.model_wrappers.base import BaseModelWrapper
+
 
 class CoreMLExporter(BaseModelExporter):
     """
