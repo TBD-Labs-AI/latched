@@ -14,5 +14,5 @@ class TFLiteExporter(BaseModelExporter):
     """
 
     @classmethod
-    def run(cls, model_wrapper: BaseModelWrapper, output_name: str = "model.tflite") -> None:
+    def run(cls, model_wrapper: BaseModelWrapper, **kwargs) -> None:
         pass

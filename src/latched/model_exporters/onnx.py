@@ -17,10 +17,11 @@ class ONNXExporter(BaseModelExporter):
     """
 
     @classmethod
-    def run(cls, model_wrapper: BaseModelWrapper, output_name: str = "onnx_model") -> None:
+    def run(cls, model_wrapper: BaseModelWrapper, **kwargs) -> None:
         if isinstance(model_wrapper, HuggingFaceModelWrapper):
             from optimum.exporters.onnx import onnx_export_from_model
 
+            output_name = kwargs.get("output_name", "onnx_model")
             onnx_export_from_model(model_wrapper.original_model, output_name)
 
             print(f"Model exported to {output_name}")

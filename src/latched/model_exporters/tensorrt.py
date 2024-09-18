@@ -14,5 +14,5 @@ class TensorRTExporter(BaseModelExporter):
     """
 
     @classmethod
-    def run(cls, model_wrapper: BaseModelWrapper, output_name: str = "model.trt") -> None:
+    def run(cls, model_wrapper: BaseModelWrapper, **kwargs) -> None:
         pass

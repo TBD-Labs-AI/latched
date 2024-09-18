@@ -16,5 +16,5 @@ class BaseModelExporter:
     """
 
     @abstractmethod
-    def run(cls, model_wrapper: BaseModelWrapper, output_name: str = "model.abc") -> None:
+    def run(cls, model_wrapper: BaseModelWrapper, **kwargs) -> None:
         raise NotImplementedError
