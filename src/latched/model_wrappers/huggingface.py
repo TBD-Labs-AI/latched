@@ -3,14 +3,15 @@
 
 from typing import TypeAlias
 
-import torch.nn as nn
-
+import torch
+from torch import nn
 from transformers import PreTrainedTokenizer, PreTrainedTokenizerFast
 
 from latched.configs.device import DeviceConfig
 from latched.model_wrappers.base import BaseModelWrapper
 
 HuggingFaceTokenizer: TypeAlias = PreTrainedTokenizer | PreTrainedTokenizerFast
+TracedModule: TypeAlias = torch.jit._trace.TopLevelTracedModule  # type: ignore
 
 
 class HuggingFaceModelWrapper(BaseModelWrapper):
@@ -56,3 +57,23 @@ class HuggingFaceModelWrapper(BaseModelWrapper):
         from transformers.models.llama import LlamaModel
 
         return isinstance(model, LlamaModel)
+
+
+class LLMScriptModelWrapper(nn.Module):
+    def __init__(self, model: TracedModule, eos_token_id: int):
+        super().__init__()
+        self.model = model
+        self.eos = torch.tensor([[eos_token_id]], dtype=torch.long)
+
+    def forward(self, tokens: torch.Tensor) -> torch.Tensor:
+        sentence = tokens
+
+        for _ in range(100):
+            predictions, _ = self.model(sentence)
+            token = torch.argmax(predictions[:, -1, :], dim=-1).unsqueeze(1)
+            sentence = torch.cat([sentence, token], dim=1)
+
+            if token == self.eos:
+                break
+
+        return sentence

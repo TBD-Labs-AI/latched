@@ -238,3 +238,7 @@ xcuserdata/
 *.7z
 *.onnx
 *.tflite
+
+
+# Ignore vscode
+.vscode/*
