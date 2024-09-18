@@ -19,14 +19,13 @@ class ScriptModel(nn.Module):
 
 
 class LLMScriptModel(ScriptModel):
-    def __init__(self, model: TracedModule, **kwargs):
-        super().__init__()
-        self.model = model
-        self.eos_token_id = kwargs.get("eos_token_id")
-        if not self.eos_token_id:
+    def __init__(self, model: TracedModule, eos_token_id: int, max_token_length: int = 100, **kwargs):
+        super().__init__(model)
+        if eos_token_id is None:
             raise ValueError("LLMScriptModel needs eos_token_id")
+        self.eos_token_id = eos_token_id
         self.eos = torch.tensor([[self.eos_token_id]], dtype=torch.long)
-        self.max_token_length = 100
+        self.max_token_length = max_token_length
 
     def forward(self, tokens: torch.Tensor) -> torch.Tensor:
         sentence = tokens
