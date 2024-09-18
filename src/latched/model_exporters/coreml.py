@@ -41,14 +41,11 @@ class CoreMLExporter(BaseModelExporter):
             target_model = cls.ForwardModel(model.model)
             dummy_input = torch.randint(1000, (1, 512), dtype=torch.int32)
             target_model.eval()
-            target_model.to("cuda")
             with profile("torch.jit.trace"):
                 with torch.no_grad():
                     traced_model = torch.jit.trace(target_model, dummy_input.to("cuda"))
-            target_model.to("cpu")
-            target_model.eval()
 
-            ct_shape = ct.Shape(shape=(1, ct.RangeDim(lower_bound=1, upper_bound=512)))
+            ct_shape = ct.Shape(shape=(1, ct.RangeDim(lower_bound=1, upper_bound=2048)))
             with profile("coremltools.convert"):
                 mlmodel = ct.convert(
                     traced_model,
@@ -57,12 +54,8 @@ class CoreMLExporter(BaseModelExporter):
                     source="pytorch",
                     outputs=[ct.TensorType(name="logits", dtype=np.float32)],
                     compute_precision=ct.precision.FLOAT32,
+                    minimum_deployment_target=ct.target.iOS18,
                 )
             mlmodel.save(output_name)  # type: ignore
         else:
             raise ValueError(f"Unsupported model type: {type(model)}")
-
-
-def print_model_dtypes(model: nn.Module) -> None:
-    for name, param in model.named_parameters():
-        print(f"{name}: {param.dtype}")
