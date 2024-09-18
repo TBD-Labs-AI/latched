@@ -20,4 +20,4 @@ latched_model_wrapper = AutoModelWrapper(model=model, tokenizer=tokenizer).creat
 # optimized_model_wrapper = AutoOptimizer.run(latched_model_wrapper)
 
 # Export the model to CoreML
-CoreMLExporter.run(latched_model_wrapper, output_name="phi-3.5-mini-coreml-v2-int64.mlpackage")
+CoreMLExporter.run(latched_model_wrapper)
