@@ -5,20 +5,14 @@ import torch
 import torch.nn as nn
 
 
-class CoreMLLanguageModel(nn.Module):
+class CoreMLForwardModel(nn.Module):
     """
-    Model for the CoreML Language Model
-
-    Args:
-        eos_token_id (int): the id of the EOS token
+    Model for the CoreML forward
     """
 
-    # TODO: Update below code especially forward method
-    def __init__(self, model: nn.Module, eos_token_id: int):
+    def __init__(self, model: nn.Module):
         super().__init__()
         self.model = model
-        self.default_token = torch.tensor([[0]], dtype=torch.int64)
-        self.eos = torch.tensor([[eos_token_id]], dtype=torch.int64)
 
-    def forward(self, tokens: torch.Tensor) -> torch.Tensor:
-        return self.model(tokens)
+    def forward(self, input_ids: torch.Tensor) -> torch.Tensor:
+        return self.model(input_ids)[0]
