@@ -16,8 +16,5 @@ model = AutoModelForCausalLM.from_pretrained(model_path, torchscript=True)
 # Wrap the model in Latched's AutoModel
 latched_model_wrapper = AutoModelWrapper(model=model, tokenizer=tokenizer).create()
 
-# Optimize the model
-# optimized_model_wrapper = AutoOptimizer.run(latched_model_wrapper)
-
 # Export the model to CoreML
 CoreMLExporter.run(latched_model_wrapper)
