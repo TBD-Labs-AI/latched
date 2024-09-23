@@ -23,6 +23,29 @@ ML models latches onto devices
 Latched provides easy-to-use pipelines to perform ML models on various devices such as mobile, Nvidia jetson, Intel CPUs,  and accelerators.
 Latched covers both converting models and deploying them(Latched Model Manager, Latched Devices SDKs).
 
+## 📦 Installation
+
+1. Clone the repository
+    ```bash
+    git clone https://github.com/TBD-Labs-AI/latched.git
+    cd latched
+    ```
+2. Make the virtual environment with `Python 3.11.9` and activate it.
+    ```bash
+    conda create -n latched python=3.11.9
+    conda activate latched
+    ```
+3. Install the dependencies with Poetry
+    ```bash
+    pip install poetry
+    poetry install
+    ```
+4. Launch the test script (onnx export)
+    ```bash
+    python examples/llama-3.1-8B-Instruct-to-onnx/llama_onnx_example.py
+    ```
+
+
 ## 🤖 Supported ML Tasks
 
 📚 Text:
