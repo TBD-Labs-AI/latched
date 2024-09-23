@@ -23,27 +23,6 @@ ML models latches onto devices
 Latched provides easy-to-use pipelines to perform ML models on various devices such as mobile, Nvidia jetson, Intel CPUs,  and accelerators.
 Latched covers both converting models and deploying them(Latched Model Manager, Latched Devices SDKs).
 
-## 📦 Installation
-
-1. Clone the repository
-    ```bash
-    git clone https://github.com/TBD-Labs-AI/latched.git
-    cd latched
-    ```
-2. Make the virtual environment with `Python 3.11.9` and activate it.
-    ```bash
-    conda create -n latched python=3.11.9
-    conda activate latched
-    ```
-3. Install the dependencies with Poetry
-    ```bash
-    pip install poetry
-    poetry install
-    ```
-4. Launch the test script (onnx export)
-    ```bash
-    python examples/llama-3.1-8B-Instruct-to-onnx/llama_onnx_example.py
-    ```
 
 
 ## 🤖 Supported ML Tasks
@@ -51,7 +30,7 @@ Latched covers both converting models and deploying them(Latched Model Manager, 
 📚 Text:
 
 - Small Language Models, to embed chat-bot or text analysis on device
-  - **Phi 3.5 mini** + OmniQuantW3A16 @ iPhone 15 Pro (coming soon)
+  - **Llama-3.1-8B-Instruct** + OmniQuantW3A16 @ iPhone 15 Pro (coming soon)
   - Other models will be supported soon
 - Other tasks will be supported soon
 
@@ -86,30 +65,30 @@ Supported Frameworks:
 
 ### Installation
 
-coming soon
+1. Clone the repository
+    ```bash
+    git clone https://github.com/TBD-Labs-AI/latched.git
+    cd latched
+    ```
+2. Make the virtual environment with `Python 3.11.9` and activate it.
+    ```bash
+    conda create -n latched python=3.11.9
+    conda activate latched
+    ```
+3. Install the dependencies with Poetry
+    ```bash
+    pip install poetry
+    poetry install
+    ```
+4. Launch the test script (onnx export)
+    ```bash
+    python examples/llama-3.1-8B-Instruct-to-onnx/llama_onnx_example.py
+    ```
 
 ### How to use Latched
 
-1. Optimize Model
-   ```python
-   # Code will be updated soon
-   from latched import AutoModelOptimizer
-   ...
-   ```
-2. Export Model
-   ```python
-   # Code will be updated soon
-   ```
-3. Register Model to Model Manager
-   ```python
-   # Code will be updated soon
-   ```
-4. Run model on device (swift version)
-   ```swift
-   // Code will be updated soon
-   import Latched
-   let model = LatchedModel(key: "model_key")
-   ```
+1. [Export HuggingFace Models to the ONNX format](examples/llama-3.1-8B-Instruct-to-onnx/llama_onnx_example.py)
+2. [Export HuggingFace Models to the OpenVINO format](examples/llama-3.1-8B-Instruct-to-openvino/llama_openvino_example.py)
 
 ## 📚 Model Hub
 
