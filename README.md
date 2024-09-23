@@ -23,8 +23,6 @@ ML models latches onto devices
 Latched provides easy-to-use pipelines to perform ML models on various devices such as mobile, Nvidia jetson, Intel CPUs,  and accelerators.
 Latched covers both converting models and deploying them(Latched Model Manager, Latched Devices SDKs).
 
-
-
 ## 🤖 Supported ML Tasks
 
 📚 Text:
