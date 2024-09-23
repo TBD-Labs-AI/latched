@@ -24,6 +24,6 @@ class ONNXExporter(BaseModelExporter):
             output_name = kwargs.get("output_name", "onnx_model")
             onnx_export_from_model(model_wrapper.original_model, output_name)
 
-            print(f"Model exported to {output_name}")
+            print(f"\nModel successfully exported to {output_name}")
         else:
             raise NotImplementedError(f"Unsupported model wrapper: {type(model_wrapper)}")

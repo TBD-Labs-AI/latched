@@ -4,7 +4,6 @@
 from dataclasses import dataclass
 
 from latched.configs.apple import Apple
-from latched.configs.base import Device
 
 AVAILABLE_DEVICES = {
     "apple": [
@@ -29,7 +28,6 @@ class DeviceConfig:
     """
 
     type: str
-    dtype: Device
     limit_mem_gb: int = 2
 
 

@@ -35,7 +35,7 @@ class HuggingFaceModelWrapper(BaseModelWrapper):
             self.model = model.model
             self.original_model = model
         elif self._is_llama_model(model):
-            self.model = model.model.model
+            self.model = model.model
             self.original_model = model
         else:
             self.model = model
@@ -46,12 +46,12 @@ class HuggingFaceModelWrapper(BaseModelWrapper):
 
     def _is_phi3_model(self, model: nn.Module) -> bool:
         """Check if the model is a Phi3 model."""
-        from transformers.models.phi3 import Phi3Model
+        from transformers.models.phi3 import Phi3ForCausalLM
 
-        return isinstance(model.model, Phi3Model)
+        return isinstance(model.model, Phi3ForCausalLM)
 
     def _is_llama_model(self, model: nn.Module) -> bool:
         """Check if the model is a Llama model."""
-        from transformers.models.llama import LlamaModel
+        from transformers.models.llama import LlamaForCausalLM
 
-        return isinstance(model, LlamaModel)
+        return isinstance(model, LlamaForCausalLM)

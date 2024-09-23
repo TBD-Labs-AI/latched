@@ -17,6 +17,7 @@ optimum-quanto = "^0.2.4"
 onnxruntime = "^1.19.2"
 onnx = "^1.16.2"
 optimum-intel = "^1.19.0"
+openvino = "^2024.4.0"
 
 
 [tool.poetry.group.dev.dependencies]
