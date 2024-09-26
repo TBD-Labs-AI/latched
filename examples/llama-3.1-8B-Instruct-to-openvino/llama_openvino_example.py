@@ -3,20 +3,27 @@
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-from latched.configs.device import DeviceConfig
 from latched.model_wrappers.auto import AutoModelWrapper
 from latched.model_exporters.auto import AutoExporter
+from latched.endpoints.intel import IntelEndpoint
+from latched.configs.device import DeviceConfig
 
-# Setup the configuraiton
+# Step 1. Setup the configuraiton
 device_config = DeviceConfig(type="intel_i5_13900k")
 
-# Load the huggingface tokenizer and model
+# Step 2. Load the huggingface tokenizer and model
 model_path = "meta-llama/Meta-Llama-3.1-8B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype="auto")
 
-# Wrap the model in Latched's AutoModel
+# Step 3. Wrap the model in Latched's AutoModel
 latched_model_wrapper = AutoModelWrapper(model=model, tokenizer=tokenizer, device_config=device_config).create()
 
-# Export the model to OpenVINO
-AutoExporter.run(latched_model_wrapper)
+# Step 4. Export the model to OpenVINO
+AutoExporter.run(latched_model_wrapper, output_path="ov_model")
+
+# Step 5. Inference with device SDK
+# This step should be executed at Intel devices.
+intel_endpoint = IntelEndpoint(latched_model_wrapper, tokenizer, "ov_model")
+results = intel_endpoint.inference("What is the love?")
+print(results)

@@ -27,7 +27,7 @@ class BaseModelWrapper:
         self.precision = precision
         self.device_config = device_config
 
-        self.library_name = self._get_library_name(model)
+        self.library_name: str = self._get_library_name(model)
         if self.library_name not in SUPPORTED_LIBRARIES:
             raise ValueError(f"Unsupported library: {self.library_name}")
 
